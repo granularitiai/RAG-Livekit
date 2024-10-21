@@ -1,0 +1,183 @@
+ The Schrodinger equation
+In this section we’ll give a “derivation” of the Schrodinger equation. Our starting point will
+be the classical nonrelativistic expression for the energy of a particle, which is the sum of
+the kinetic and potential energies. We’ll assume as usual that the potential is a function of
+only x. We have
+E = K + V =
+1
+2
+mv2 + V (x) = p
+2
+2m
++ V (x). (3)
+We’ll now invoke de Broglie’s claim that all particles can be represented as waves with
+frequency ω and wavenumber k, and that E = ¯hω and p = ¯hk. This turns the expression
+for the energy into
+¯hω =
+¯h
+2
+k
+2
+2m
++ V (x). (4)
+A wave with frequency ω and wavenumber k can be written as usual as ψ(x, t) = Aei(kx−ωt)
+(the convention is to put a minus sign in front of the ωt). In 3-D we would have ψ(r, t) =
+Aei(k·r−ωt)
+, but let’s just deal with 1-D. We now note that
+∂ψ
+∂t = −iωψ =⇒ ωψ = i
+∂ψ
+∂t , and
+∂
+2ψ
+∂x2
+= −k
+2ψ =⇒ k
+2ψ = −
+∂
+2ψ
+∂x2
+. (5)
+If we multiply the energy equation in Eq. (4) by ψ, and then plug in these relations, we
+obtain
+¯h(ωψ) = ¯h
+2
+2m
+(k
+2ψ) + V (x)ψ =⇒ i¯h
+∂ψ
+∂t =
+−¯h
+2
+2m
+·
+∂
+2ψ
+∂x2
++ V ψ (6)
+This is the time-dependent Schrodinger equation. If we put the x and t arguments back in,
+the equation takes the form,
+i¯h
+∂ψ(x, t)
+∂t =
+−¯h
+2
+2m
+·
+∂
+2ψ(x, t)
+∂x2
++ V (x)ψ(x, t). (7)
+In 3-D, the x dependence turns into dependence on all three coordinates (x, y, z), and the
+∂
+2ψ/∂x2
+term becomes ∇2ψ (the sum of the second derivatives). Remember that Born’s
+(correct) interpretation of ψ(x) is that |ψ(x)|
+2 gives the probability of finding the particle
+at position x.
+Having successfully produced the time-dependent Schrodinger equation, we should ask:
+Did the above reasoning actually prove that the Schrodinger equation is valid? No, it didn’t,
+for three reasons.
+1. The reasoning is based on de Broglie’s assumption that there is a wave associated with
+every particle, and also on the assumption that the ω and k of the wave are related to
+E and p via Planck’s constant in Eqs. (1) and (2). We had to accept these assumptions
+on faith.
+2. Said in a different way, it is impossible to actually prove anything in physics. All we
+can do is make an educated guess at a theory, and then do experiments to try to show
+10.2. THE SCHRODINGER EQUATION 5
+that the theory is consistent with the real world. The more experiments we do, the
+more comfortable we are that the theory is a good one. But we can never be absolutely
+sure that we have the correct theory. In fact, odds are that it’s simply the limiting
+case of a more correct theory.
+3. The Schrodinger equation actually isn’t valid, so there’s certainly no way that we
+proved it. Consistent with the above point concerning limiting cases, the quantum
+theory based on Schrodinger’s equation is just a limiting theory of a more correct one,
+which happens to be quantum field theory (which unifies quantum mechanics with
+special relativity). This is turn must be a limiting theory of yet another more correct
+one, because it doesn’t incorporate gravity. Eventually there will be one theory that
+covers everything (although this point can be debated), but we’re definitely not there
+yet.
+Due to the “i” that appears in Eq. (6), ψ(x) is complex. And in contrast with waves in
+classical mechanics, the entire complex function now matters in quantum mechanics. We
+won’t be taking the real part in the end. Up to this point in the book, the use of complex
+functions was simply a matter of convenience, because it is easier to work with exponentials
+than trig functions. Only the real part mattered (or imaginary part – take your pick, but not
+both). But in quantum mechanics the whole complex wavefunction is relevant. However,
+the theory is structured in such a way that anything you might want to measure (position,
+momentum, energy, etc.) will always turn out to be a real quantity. This is a necessary
+feature of any valid theory, of course, because you’re not going to go out and measure a
+distance of 2 + 5i meters, or pay an electrical bill of 17 + 6i kilowatt hours.
+As mentioned in the introduction to this chapter, there is an endless number of difficult
+questions about quantum mechanics that can be discussed. But in this short introduction
+to the subject, let’s just accept Schrodinger’s equation as valid, and see where it takes us.
+
+Solving the equation
+If we put aside the profound implications of the Schrodinger equation and regard it as
+simply a mathematical equation, then it’s just another wave equation. We already know
+the solution, of course, because we used the function ψ(x, t) = Aei(kx−ωt)
+to produce Eqs.
+(5) and (6) in the first place. But let’s pretend that we don’t know this, and let’s solve the
+Schrodinger equation as if we were given it out of the blue.
+As always, we’ll guess an exponential solution. If we first look at exponential behavior
+in the time coordinate, our guess is ψ(x, t) = e
+−iωtf(x) (the minus sign here is convention).
+Plugging this into Eq. (7) and canceling the e
+−iωt yields
+¯hωf(x) = −
+¯h
+2
+2m
+∂
+2f(x)
+∂x2
++ V (x)f(x). (8)
+But from Eq. (1), we have ¯hω = E. And we’ll now replace f(x) with ψ(x). This might
+cause a little confusion, since we’ve already used ψ to denote the entire wavefunction ψ(x, t).
+However, it is general convention to also use the letter ψ to denote the spatial part. So we
+now have
+E ψ(x) = −
+¯h
+2
+2m
+∂
+2ψ(x)
+∂x2
++ V (x)ψ(x) (9)
+This is called the time-independent Schrodinger equation. This equation is more restrictive
+than the original time-dependent Schrodinger equation, because it assumes that the particle/wave has a definite energy (that is, a definite ω). In general, a particle can be in a state
+that is the superposition of states with various definite energies, just like the motion of a
+6 CHAPTER 10. INTRODUCTION TO QUANTUM MECHANICS
+string can be the superposition of various normal modes with definite ω’s. The same reasoning applies here as with all the other waves we’ve discussed: From Fourier analysis and
+from the linearity of the Schrodinger equation, we can build up any general wavefunction
+from ones with specific energies. Because of this, it suffices to consider the time-independent
+Schrodinger equation. The solutions for that equation form a basis for all possible solutions.1
+Continuing with our standard strategy of guessing exponentials, we’ll let ψ(x) = Aeikx
+.
+Plugging this into Eq. (9) and canceling the e
+ikx gives (going back to the ¯hω instead of E)
+¯hω = −
+¯h
+2
+2m
+(−k
+2
+) + V (x) =⇒ ¯hω =
+¯h
+2
+k
+2
+2m
++ V (x). (10)
+This is simply Eq. (4), so we’ve ended up back where we started, as expected. However, our
+goal here was to show how the Schrodinger equation can be solved from scratch, without
+knowing where it came from.
+Eq. (10) is (sort of) a dispersion relation. If V (x) is a constant C in a given region, then
+the relation between ω and k (namely ω = ¯hk2/2m + C) is independent of x, so we have
+a nice sinusoidal wavefunction (or exponential, if k is imaginary). However, if V (x) isn’t
+constant, then the wavefunction isn’t characterized by a unique wavenumber. So a function
+of the form e
+ikx doesn’t work as a solution for ψ(x). (A Fourier superposition can certainly
+work, since any function can be expressed that way, but a single e
+ikx by itself doesn’t work.)
+This is similar to the case where the density of a string isn’t constant. We don’t obtain
+sinusoidal waves there eithe
