@@ -1,5 +1,3 @@
-import os
-os.environ['LIVEKIT_API_KEY'] = "APIPPuQvJu9mSAX" 
 
 
 
